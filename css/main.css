@@ -23,15 +23,7 @@ body {
 	flex-flow: row wrap;
 }
 
-header {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-}
-
-.top-section, .bottom-section, footer {
+header, .top-section, .bottom-section, footer {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -63,6 +55,7 @@ h4 {
 p {
 	font-size: .875em;
 	line-height: 1.31em;
+	padding: 0 30px;
 }
 
 /* Header styles */
@@ -73,7 +66,7 @@ header {
 }
 
 header h1 {
-	padding: .25em 1em;
+	padding: 20px 30px;
 	border-bottom: 3px solid #77a466;
 	text-align: center;
 }
@@ -88,13 +81,18 @@ header nav {
 
 header nav ul {
 	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	padding: 0;
 }
 
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	padding: .625em 0;
+	padding: 10px 0;
 	text-align: center;
 }
 
@@ -131,6 +129,14 @@ header nav ul li a{
 
 /* Bottom Section styles */
 
+.bottom-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	flex-basis: 300px;
+}
+
 .section-one,
 .section-two,
 .section-three {
@@ -138,7 +144,7 @@ header nav ul li a{
 }
 
 .section-one h4, .section-two h4, .section-three h4 {
-	padding: .625em 0;
+	padding: 10px 0;
 }
 
 .menu {
@@ -182,32 +188,32 @@ footer span {
 /* End Footer styles */
 
 /* ------- Tablet ------ */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) {
 
-p {
-	padding: 0 1.875em;
-}
-	
 header h1 {
-	width: 88%
+	width: 88%;
 }
 
 .top-section {
 	border-bottom: 1px solid #eee;
 }
 
-.section-one,
-.section-two,
-.section-three {
-	width: 30%;
-	height: auto;
-	float: left;
-	border-top: none;
-	text-align: left;
+.bottom-section {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	flex-basis: auto;
 }
 
-.section-one h4 {
-	padding: .625em 0;
+.section-one, .section-two, .section-three {
+	width: 30%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: row wrap;
+	flex-basis: auto;
+	border-top: none;
 }
 
 .section-two {
@@ -217,30 +223,9 @@ header h1 {
 
 .section-two h4,
 .section-three h4 {
-	padding: .625em 1.875em;
-	margin: 0;
+	padding: 10px 30px;
 }
 
-.menu {
-	list-style: none;
-	padding: 0;
-}
-.menu li {
-	padding: .625em 0;
-	color:#77a466;
-}
-
-.reviews {
-	color: #333;
-	font-size: 1em;
-	line-height: 1.3125em;
-}
-
-.address {
-	font-size: 1em;
-	line-height: 1.5em;
-	margin: 0;
-}
 }
 /* ------- End Tablet ------ */
 
@@ -253,32 +238,6 @@ header h1 {
 	margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4 {
-	color: black;
-	text-transform: uppercase;
-	font-weight: 700;
-}
-h1 {
-	font-size: 30px;
-}
-h2 {
-    font-size: 24px;
-}
-h3 {
-	font-size: 18px;
-}
-h4 {
-	font-size: 12px;
-}
-
-p {
-	font-size: 14px;
-	line-height: 21px;
-    padding: 0 30px;
-}
 
 /*The widths are in a percentage!*/
 header {
@@ -307,6 +266,9 @@ header nav {
 header nav ul {
 	margin: 0;
 	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
 }
 header nav ul li {
 	text-transform: uppercase;
@@ -354,13 +316,16 @@ header nav ul li a{
 	padding: 0;
 	font-size: 16px;
 	line-height: 25px;
-}
+} 
 
 .section-one,
 .section-two,
 .section-three {
 	width: 33%;
 	height: auto;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
 	float: left;
 	border-top: none;
 }
